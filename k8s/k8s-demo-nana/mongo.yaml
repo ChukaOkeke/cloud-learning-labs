@@ -39,7 +39,7 @@ metadata:
   name: mongo-service
 spec:
   selector:   # Select pods to forward the request to
-    app.kubernetes.io/name: mongo
+    app: mongo
   ports:
     - protocol: TCP
       port: 27017  # Port exposed by the Service
