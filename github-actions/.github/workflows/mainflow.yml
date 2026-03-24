@@ -7,7 +7,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/5 * * * *' # Every 5 minutes
   workflow_dispatch:
 
 jobs:
