@@ -1,5 +1,5 @@
-# See 02-workflow-events/README.md for more information
-# about different triggers for GitHub Actions.
+
+# Main workflow
 
 name: Workflow
 
