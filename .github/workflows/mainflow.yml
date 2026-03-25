@@ -5,11 +5,21 @@ name: 02 - Workflow Events
 
 on:
   push:
+  pull_request:
+  schedule:
+    - cron: '*/5 * * * *' # Every 5 minutes
   workflow_dispatch:
 
 jobs:
-  echo:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Show the trigger
-        run: echo "I've been triggered by a(n) ${{ github.event_name }} event."
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+      - name: Install Dependencies
+        run: npm ci
+        working-directory: ga-app/react-app
