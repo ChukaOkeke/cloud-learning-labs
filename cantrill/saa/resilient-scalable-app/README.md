@@ -1,0 +1,2 @@
+This project deploys a simple application (landing page) to a resilient and scalable cloud server architecture using an ELB (ALB), ASG (with a launch template), EFS file system, and RDS instances in a subnet group.
+   
